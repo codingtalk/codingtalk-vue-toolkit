@@ -1,0 +1,184 @@
+{
+  "status": true,
+  "data": {
+    "config": {
+      "type": "step",
+      "section": [
+        {
+          "title": "步骤一",
+          "col": 3,
+          "field": [
+            "username",
+            "password",
+            "loginTime",
+            "isAutoLogin",
+            "fileJson",
+            "remark"
+          ]
+        },
+        {
+          "title": "步骤二",
+          "col": 1,
+          "field": ["loginLog"]
+        }
+      ],
+      "step": [
+        {
+          "title": "步骤一",
+          "field": [
+            "username",
+            "password",
+            "loginTime",
+            "isAutoLogin",
+            "fileJson",
+            "remark"
+          ]
+        },
+        {
+          "title": "步骤二",
+          "field": ["loginLog"]
+        }
+      ]
+    },
+    "form": [
+      {
+        "label": "账号",
+        "key": "username",
+        "type": "text",
+        "opt": {
+          "skip": false,
+          "require": true,
+          "type": "string|min:4|max:12",
+          "value": "",
+          "errorTip": "请输入账号"
+        }
+      },
+      {
+        "label": "密码",
+        "key": "password",
+        "type": "password",
+        "tip": "如果忘记密码，请联系管理员！",
+        "opt": {
+          "skip": false,
+          "require": true,
+          "type": "string|min:4|max:12",
+          "value": ""
+        }
+      },
+      {
+        "label": "登录时间",
+        "key": "loginTime",
+        "type": "text",
+        "opt": {
+          "skip": false,
+          "require": true,
+          "type": "string|min:4|max:12",
+          "keyPath": "extraData",
+          "value": ""
+        }
+      },
+      {
+        "label": "是否记住密码",
+        "key": "isAutoLogin",
+        "type": "ratio",
+        "config": {
+          "ratio": [
+            {
+              "label": "是",
+              "value": true
+            },
+            {
+              "label": "否",
+              "value": false
+            }
+          ]
+        },
+        "opt": {
+          "skip": false,
+          "require": false,
+          "type": "string|min:4|max:12",
+          "keyPath": "extraData",
+          "value": ""
+        }
+      },
+      {
+        "label": "附件",
+        "key": "fileJson",
+        "type": "file",
+        "tip": "仅支持上传PNG,PDF,EXCEL",
+        "opt": {
+          "skip": false,
+          "require": false,
+          "isJson": true,
+          "type": "string|min:4|max:12",
+          "keyPath": "extraData",
+          "value": ""
+        }
+      },
+      {
+        "label": "备注",
+        "key": "remark",
+        "type": "textarea",
+        "opt": {
+          "skip": false,
+          "require": false,
+          "type": "string|min:4|max:12",
+          "keyPath": "extraData",
+          "value": ""
+        }
+      },
+      {
+        "label": "登录记录",
+        "key": "loginLog",
+        "type": "array",
+        "config": {
+          "template": [
+            {
+              "label": "ip",
+              "key": "ip",
+              "type": "text",
+              "opt": {
+                "skip": false,
+                "require": true,
+                "type": "string|min:4|max:12",
+                "value": "",
+                "errorTip": "请输入ip"
+              }
+            },
+            {
+              "label": "登录时间",
+              "key": "time",
+              "type": "text",
+              "opt": {
+                "skip": false,
+                "require": true,
+                "type": "string|min:4|max:12",
+                "value": "",
+                "errorTip": "请输入时间"
+              }
+            },
+            {
+              "label": "截图",
+              "key": "img",
+              "type": "file",
+              "tip": "仅支持上传PNG,PDF,EXCEL",
+              "opt": {
+                "skip": false,
+                "require": false,
+                "type": "string|min:4|max:12",
+                "value": ""
+              }
+            }
+          ]
+        },
+        "opt": {
+          "skip": false,
+          "require": false,
+          "type": "string|min:4|max:12",
+          "keyPath": "extraData",
+          "value": []
+        }
+      }
+    ]
+  }
+}

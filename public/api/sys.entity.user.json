@@ -1,0 +1,14 @@
+{
+  "status": true,
+  "data": {
+    "enumValues": [
+      {
+        "list": [
+          { "value": "save", "color": "#333", "label": "保存" },
+          { "value": "pendding", "color": "#2d8cf0", "label": "审核中" }
+        ],
+        "key": "status"
+      }
+    ]
+  }
+}

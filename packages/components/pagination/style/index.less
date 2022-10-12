@@ -1,0 +1,43 @@
+.cvt_pagination {
+  .layout_flex();
+  .pagination_pre,
+  .pagination_next {
+    .layout_flex(@j: center);
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid @border-color-base;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .pagination_list {
+    .layout_flex();
+    padding: 0 20px;
+
+    .list_item {
+      .layout_flex(@j: center);
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 1px solid @border-color-base;
+
+      &--active {
+        border: 1px solid @primary-color;
+
+        span {
+          color: @primary-color;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

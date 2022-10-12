@@ -1,0 +1,48 @@
+.cvt_step{
+    .layout_flex(@j: center);
+    .step_item{
+			position: relative;
+        .layout_flex();
+        .item_dot{
+					.layout_flex(@j:center);
+					width:30px;
+					height: 30px;
+					box-sizing: border-box;
+					border: 1px solid @border-color-base;
+					border-radius: 15px;
+					span{
+						color:@border-color-base;
+					}
+				}
+				.item_text{
+					padding-left: 10px;
+				}
+				&--active{
+					.item_dot{
+						border: none;
+						background: @primary-color;
+						span{
+							color:white
+						}
+					}
+					&:after{
+						background: @primary-color!important;
+					}
+				}
+				&:not(:last-child){
+					&:after{
+						position: absolute;
+						top:50%;
+						right:-180px;
+						transform: translateY(-50%);
+						content: "";
+						width:160px;
+						height: 1px;
+						background: @border-color-base;
+					}
+				}
+				&:not(:first-child){
+					margin-left: 200px;
+				}
+    }
+}

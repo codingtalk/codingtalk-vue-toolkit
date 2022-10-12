@@ -1,0 +1,21 @@
+.cvt_detail {
+  background: white;
+  padding: 20px;
+  .detail_section {
+    padding-bottom: 40px;
+    .section_title {
+      .layout_flex(@a: center);
+      height: 70px;
+    }
+    .section_content {
+      .content_val {
+        .layout_flex(@a: center);
+        min-height: 60px;
+      }
+    }
+    &:not(:first-child) {
+      padding-top: 40px;
+      border-top: 1px solid @border-color-base;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.cvt_message_tip {
+    position: fixed;
+    top:100px;
+    left:50%;
+    transform: translateX(-50%);
+    .layout_flex( );
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    &--success{
+        border-radius: 5px;
+        border: 1px solid #e1f3d8;
+        background: #f0f9eb;
+        color:@success-color;
+        font-size: @font-size-base;
+    }
+
+    &_fade-enter-active,
+    &_fade-leave-active {
+        transition: opacity 0.4s;
+    }
+
+    &_fade-enter,
+    &_fade-leave-to {
+        opacity: 0;
+    }
+}

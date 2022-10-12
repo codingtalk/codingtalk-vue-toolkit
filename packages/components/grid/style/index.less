@@ -1,0 +1,36 @@
+.cvt_grid {
+  .grid_title {
+    padding: 0px 0 10px;
+    font-size: 18px;
+    color: #666;
+  }
+  .grid_content {
+    display: grid;
+    width: 100%;
+    & > .grid_item {
+      line-height: 22px;
+      padding-left: 18px;
+    }
+  }
+  &--border {
+    .grid_content {
+      box-sizing: border-box;
+      border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      & > div {
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+      }
+    }
+  }
+  .grid_item {
+    display: flex;
+    padding: 2px 18px 2px;
+    color: #666;
+    & > span {
+      color: #666;
+      flex-shrink: 0;
+    }
+  }
+}

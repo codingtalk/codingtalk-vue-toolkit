@@ -1,0 +1,22 @@
+.cvt_input {
+  .layout_flex();
+  input,
+  textarea {
+    padding: 10px 15px;
+    background: white;
+    border: 1px solid @border-color-base;
+    outline: none;
+    border-radius: 2px;
+    &:hover {
+      border-color: @link-hover-color !important;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @link-hover-color;
+    }
+  }
+  input {
+    width: 300px;
+  }
+  textarea {
+    width: 550px;
+  }
+}

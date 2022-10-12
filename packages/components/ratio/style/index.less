@@ -1,0 +1,45 @@
+.cvt_ratio {
+	.layout_flex();
+
+	.ratio_item {
+		.layout_flex();
+
+		.item_dot {
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			border: 1px solid @border-color-base;
+			background: white;
+		}
+
+		.item_text{
+			padding-left: 10px;
+		}
+
+		&--active {
+			.item_dot {
+				position: relative;
+
+				&:after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					content: "";
+					width: 18px;
+					height: 18px;
+					border-radius: 9px;
+					background: @primary-color;
+				}
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:not(:first-child) {
+			margin-left: 20px;
+		}
+	}
+}

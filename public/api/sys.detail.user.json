@@ -1,0 +1,85 @@
+{
+  "status": true,
+  "data": {
+    "config": {
+      "type": "default",
+      "col": 3,
+      "section": [
+        {
+          "title": "步骤一",
+          "col": 3,
+          "field": [
+            "username",
+            "password",
+            "loginTime",
+            "isAutoLogin",
+            "fileJson",
+            "remark"
+          ]
+        },
+        {
+          "title": "步骤二",
+          "col": 1,
+          "field": ["loginLog"]
+        }
+      ]
+    },
+    "detail": [
+      {
+        "label": "账号",
+        "key": "username",
+        "type": "text"
+      },
+      {
+        "label": "密码",
+        "key": "password",
+        "type": "text"
+      },
+      {
+        "label": "登录时间",
+        "key": "loginTime",
+        "path": "infoData.loginTime",
+        "type": "text"
+      },
+      {
+        "label": "是否记住密码",
+        "key": "isAutoLogin",
+        "type": "ratio"
+      },
+      {
+        "label": "附件",
+        "key": "fileJson",
+        "type": "file"
+      },
+      {
+        "label": "备注",
+        "key": "remark",
+        "type": "textarea"
+      },
+      {
+        "label": "登录记录",
+        "key": "loginLog",
+        "type": "array",
+        "config": {
+          "template": [
+            {
+              "label": "ip",
+              "key": "ip",
+              "type": "text"
+            },
+            {
+              "label": "登录时间",
+              "key": "time",
+              "type": "text"
+            },
+            {
+              "label": "截图",
+              "key": "img",
+              "type": "file"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

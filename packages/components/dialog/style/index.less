@@ -1,0 +1,85 @@
+.cvt_dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+
+  &--center {
+    .dialog_container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+
+      .container_header {
+        .layout_flex(@j:space-between, @a: center);
+        height: 70px;
+        padding: 0 20px;
+        color: @title-color;
+
+        color: @title-color;
+        .header_left {
+          position: relative;
+          padding-left: 20px;
+          &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -5px;
+            width: 5px;
+            content: "";
+            background: #515a6e;
+          }
+        }
+
+        .header_right {
+          .right_close {
+            .layout_flex(@j:center);
+            width: 30px;
+            height: 30px;
+            background: #f7f7f7;
+
+            i {
+              font-size: 25px;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .container_main {
+        min-width: 500px;
+        min-height: 200px;
+      }
+
+      .container_footer {
+        .layout_flex(@a:flex-start, @j:flex-end);
+        height: 60px;
+        padding: 0 20px;
+
+        .footer_right {
+          display: flex;
+          .cvt_button {
+            &:not(:first-child) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-fade-enter-active,
+  &-fade-leave-active {
+    transition: opacity 0.4s;
+  }
+
+  &-fade-enter,
+  &-fade-leave-to {
+    opacity: 0;
+  }
+}

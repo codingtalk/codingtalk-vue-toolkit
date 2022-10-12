@@ -1,0 +1,22 @@
+{
+    "test": {
+        "domain": {
+          "dev": "//localhost:3000/",
+          "lcoal": "/",
+          "test": "/",
+          "prod": "/"
+        },
+        "modules": {
+          "user": {
+            "page": {
+              "method": "POST",
+              "path": "api/user.page.json"
+            },
+            "info": {
+              "method": "POST",
+              "path": "api/user.info.json"
+            }
+          }
+        }
+      }
+}

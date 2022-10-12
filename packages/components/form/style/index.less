@@ -1,0 +1,26 @@
+.cvt_form {
+	.form_step{
+		height: 100px;
+		.layout_flex();
+	}
+	.form_content {
+		.content_result {
+			.layout_flex(@d:column);
+			padding: 40px 0 100px;
+			.result_icon{
+				.cvt-icon{
+					font-size: 140px;
+					color: @success-color;
+				}
+			}
+			.result_tip{
+				.layout_flex(@d:column);
+				padding: 20px;
+			}
+		}
+	}
+
+	.form_submit {
+		padding-top: 40px;
+	}
+}

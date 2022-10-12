@@ -1,0 +1,62 @@
+@import url("../../../style/var.less");
+@import url("../../../style/mixins.less");
+.cvt_page-loader {
+  width: 100%;
+  .loader_query {
+    height: 100px;
+    padding: 0 20px;
+    background: white;
+    .layout_flex( );
+    .query_left {
+      flex: 1;
+    }
+    .query_right {
+      .layout_flex( );
+    }
+  }
+  .loader_toolbar {
+    .layout_flex( @j:space-between);
+    height: 100px;
+    padding: 0 20px;
+    margin-top: 20px;
+    background: white;
+    .toolbar_right {
+      .layout_flex( );
+      .right_section {
+        .layout_flex( );
+        padding: 0 20px;
+        &:not(:first-child) {
+          border-left: 1px solid @border-color-base;
+        }
+      }
+    }
+  }
+  .loader_content {
+    padding: 0 20px 40px 20px;
+    background: white;
+    p {
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+  }
+  .loader_footer {
+    .layout_flex( @j:space-between);
+    height: 100px;
+    padding: 0 20px;
+    background: white;
+    .footer_right {
+      .layout_flex();
+      .right_size {
+        padding: 0 20px;
+      }
+      .right_page{
+        .cvt_selector{
+          .selector_tag{
+            width:150px;
+          }
+        }
+      }
+    }
+  }
+}
