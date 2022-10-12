@@ -24,7 +24,7 @@ in main.js
 import axios from "axios";
 import _ from "lodash";
 import * as echarts from "echarts";
-import { install as CodingtalkVueToolkitInstall } from "codingtalk-vue-toolkit/";
+import { install as CodingtalkVueToolkitInstall } from "codingtalk-vue-toolkit";
 
 const app = createApp(App);
 CodingtalkVueToolkitInstall(
