@@ -84,7 +84,7 @@ export default defineComponent({
       }
       if (props.formPreHook) {
         for (let i in props.formPreHook()?.query) {
-          form.query[i] = props.formPreHook()?.query[i] ? props.formPreHook()?.query[i] : form.query[i];
+          form.query[i] = ![undefined].includes(props.formPreHook()?.query[i]) ? props.formPreHook()?.query[i] : form.query[i];
         }
       }
       const { _entityCollection } = window.$CVT;
@@ -157,6 +157,7 @@ export default defineComponent({
       queryReset,
       pageData,
       pageTotal,
+      pageIndexUpdate,
       form,
       params,
     }
