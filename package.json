@@ -1,7 +1,7 @@
 {
   "name": "codingtalk-vue-toolkit",
   "private": false,
-  "version": "0.0.72",
+  "version": "0.0.73",
   "main": "dist_publish/index.js",
   "files": [
     "dist_publish",

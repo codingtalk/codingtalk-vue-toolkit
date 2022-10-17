@@ -71,8 +71,11 @@ const ok = () => {
   loading.confirm = true;
   props.confirm().then(() => {
     visible.value = false;
+  }).catch(e => {
+
+  }).finally(() => {
     loading.confirm = false;
-  })
+  });
 }
 
 defineExpose({

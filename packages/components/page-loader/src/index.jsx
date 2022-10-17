@@ -68,6 +68,7 @@ export default defineComponent({
       form.query[k] = isEvent ? v.target?.value : v;
     }
     function queryReset() {
+      params.pageIndex = 1;
       form.query = {};
     }
     function pageIndexUpdate(v) {
@@ -180,7 +181,9 @@ export default defineComponent({
               </CvtGrid>
             </div >
             <div className="query_right">
-              <CvtButton>重置</CvtButton>
+                <CvtButton onClick={() => { 
+                  this.queryReset();
+                }}>重置</CvtButton>
             </div>
           </>}
         </div > : null
@@ -213,7 +216,7 @@ export default defineComponent({
       </div>
       {!this.props.config.hiddenModule?.includes('footer') ?
         <div className="loader_footer">
-          {this.slots.footer ? this.slots.footer({ total: this.pageTotal, change: this.pageIndexUpdate }) : <>
+          {this.slots.footer ? this.slots.footer({ total: this.pageTotal, index: this.params.pageIndex, change: this.pageIndexUpdate }) : <>
             <div className="footer_left"></div>
             <div className="footer_right">
               <div className="right_total">
