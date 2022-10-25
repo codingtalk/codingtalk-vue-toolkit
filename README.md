@@ -13,7 +13,7 @@ npm install codingtalk-vue-toolkit
 
 # Why codingtalk-vue-toolkit
 
-We usually building front-apps via third ui libaries for convenience. However, some fundamental functions like (http, paginate tool, data handler) is required, but these never provide. `codingtalk-vue-toolkit` make pre-bulding front-apps easier by a command `npm install codigntalk-vue-codingtalk` with some simple confifguration.
+We usually building front-apps via third ui libaries for convenience. However, some fundamental functions like (http, paginate tool, data handler) is required, but these never provide. `codingtalk-vue-toolkit` make pre-bulding front-apps easier by a command `npm install codigntalk-vue-codingtalk` with some simple configuration.
 
 # Quick Start
 
